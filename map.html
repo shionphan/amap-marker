@@ -34,11 +34,11 @@
   //初始化带中文地址的地图
   //添加marker标记  
   map.on('complete', function() {
-    setInfoWindow('cn');
+    setInfoWindow('zh_cn');
   });
 
   //切换语言点击事件
-  ['en', 'cn'].forEach(function(btn) {
+  ['en', 'zh_cn'].forEach(function(btn) {
     var button = document.getElementById(btn);
     AMap.event.addDomListener(button, 'click', function() {
       map.setLang(this.id);
@@ -49,7 +49,7 @@
   //渲染弹框界面
   function setInfoWindow(lang) {
     var info = [];
-    if (lang == 'cn') {
+    if (lang == 'zh_cn') {
       info.push("<div style=\"font-family:\'Microsoft YaHei\',Arail,sans-serif\"><strong style=\"font-size:14px;margin-bottom:4px;\">用来显示你的地点名称</strong>");
       info.push("地址: 中国上海市徐汇区天钥桥路327号");
       info.push("电话: +86 (0)21 8888 888");
